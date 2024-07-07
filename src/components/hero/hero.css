@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("https://via.placeholder.com/1920x1080");
+  background-image: url('/hero.jpg');
   background-size: cover;
   background-position: center;
   height: 80vh;
@@ -10,7 +10,7 @@
 
 .hero-content {
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 
 .hero h1 {

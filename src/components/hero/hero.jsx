@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero-content">
-        <img src="/hero.jpg" alt="portada" />
+        {/* <img src="/hero.jpg" alt="portada" /> */}
         <h1>Bienvenidos a Ice cream</h1>
         <p>¡Disfruta los mejores helados artesanales de la ciudad!</p>
         <button className="cta-button">Ver Sabores</button>
