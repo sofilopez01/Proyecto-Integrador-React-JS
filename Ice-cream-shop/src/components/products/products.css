@@ -1,0 +1,19 @@
+.products {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+  height: 50vh;
+}
+
+.products h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #272725;
+}
+
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* Aquí se pueden agregar más estilos
+  para los productos individuales */
+}
