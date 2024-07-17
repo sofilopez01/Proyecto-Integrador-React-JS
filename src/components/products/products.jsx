@@ -1,15 +1,35 @@
-import React from 'react';
-import './products.css';
+import React from "react";
+import { flavors } from "./flavors";
+import Product from "./product";
+import "./products.css";
 
-function Products() {
+export default function Products() {
+  // Agrupar sabores por categoría
+  const groupedFlavors = flavors.reduce((groups, flavor) => {
+    const category = flavor.categoria;
+    if (!groups[category]) {
+      groups[category] = [];
+    }
+    groups[category].push(flavor);
+    return groups;
+  }, {});
+
   return (
-    <section className="products">
-      <h2>Productos Destacados</h2>
-      <div className="product-list">
-        {/* Aquí se agregaran los productos destacados */}
-      </div>
-    </section>
+    <div id="products-container">
+      {Object.keys(groupedFlavors).map((category) => (
+        <div key={category} className="category">
+          <h2>{category}</h2>
+          <div className="category-products">
+            {groupedFlavors[category].map((prod) => (
+              <Product
+                key={prod.id}
+                nombre={prod.nombre}
+                descripcion={prod.descripcion}
+              />
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }
-
-export default Products;

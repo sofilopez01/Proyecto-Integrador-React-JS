@@ -1,19 +1,59 @@
-.products {
-  padding: 2rem 1rem;
-  background-color: #f9f9f9;
-  height: 50vh;
-}
-
-.products h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #272725;
-}
-
-.product-list {
+#products-container {
   display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background-color: #cbe9d8;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+
+.category h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background-color:#38ac8f;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px
+}
+
+.category-products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center;
-  gap: 1rem;
-  /* Aquí se pueden agregar más estilos
-  para los productos individuales */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #575353;
+  background-color: #fff;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin: 10px;
+  color: #666;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin: 10px;
+  color: #888;
 }
